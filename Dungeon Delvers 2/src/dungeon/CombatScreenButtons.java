@@ -3,46 +3,34 @@ package dungeon;
 public class CombatScreenButtons extends HeroRosterScreenButtons {
 	public static String target;
 	
-	public static void ActionOne() {
+	public static void action(int i) {
+		
 		tempTwo = 1;
 		speedToZero();
 		hideButtons();
 		showTargets();
-		//add possible actions
+		
+		// put action dependent instruction here justman
+		switch(i) {
+		
+		case 1:
+			
+			break;
+		
+		case 2:
+			
+			break;
+		
+		case 3:
+			
+			break;
+		}
 	}
-	
-
-	public static void ActionTwo() {
-		tempTwo = 1;
-		speedToZero();
-		hideButtons();
-		showTargets();
-		//add possible actions
-	}
-
-
-	public static void ActionThree() {
-		tempTwo = 1;
-		speedToZero();
-		hideButtons();
-		showTargets();
-		//add possible actions
-	}
-
-
-	public static void ActionFour() {
-		tempTwo = 1;
-		speedToZero();
-		hideButtons();
-		showTargets();
-		//add possible actions
-	}
-	
-	
 	
 	
 	public static void target(int i) {
 		tempTwo = 2;
+		
 		
 		target = enemy[i].getName();
 		
@@ -145,7 +133,29 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 	
 	
 	
-	public static void actionOneDescription() {
+	public static void actionDescription(int i) {
+		
+		switch(i) {
+		case 1:
+			actionOneDescription();
+			break;
+			
+		case 2:
+			actionTwoDescription();
+			break;
+			
+		case 3:
+			actionThreeDescription();
+			break;
+			
+		case 4:
+			actionFourDescription();
+			break;
+		}
+	}
+	
+	
+	private static void actionOneDescription() {
 		if (currentHero.equals("Artorias")) {
 			textLabel[0].setText("<html>"
 					+ "Sword:"
@@ -178,8 +188,7 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 		}
 	}
 	
-	
-	public static void actionOTwoDescription() {
+	private static void actionTwoDescription() {
 		if (currentHero.equals("Artorias")) {
 			textLabel[0].setText("<html>"
 					+ "Crushing Blow:"
@@ -212,7 +221,7 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 	}
 
 
-	public static void actionThreeDescription() {
+	private static void actionThreeDescription() {
 		if (currentHero.equals("Artorias")) {
 			textLabel[0].setText("<html>"
 					+ "Protection:"
@@ -246,7 +255,7 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 	}
 	
 	
-	public static void actionFourDescription() {
+	private static void actionFourDescription() {
 		if (currentHero.equals("Artorias")) {
 			textLabel[0].setText("<html>"
 					+ "Dash:"
