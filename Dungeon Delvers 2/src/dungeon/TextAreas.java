@@ -19,8 +19,8 @@ public class TextAreas extends Buttons {
 		createTextArea(2, "currentOrder", 75, 20, 850, 75, 16, false);
 		createTextArea(3, "", 250, 20, 750, 675, 16, false);
 		
-		textLabel[3].setHorizontalAlignment(textLabel[3].LEFT);
-		textLabel[3].setVerticalAlignment(textLabel[3].TOP);
+		textLabel[3].setHorizontalAlignment(JLabel.LEFT);
+		textLabel[3].setVerticalAlignment(JLabel.TOP);
 		
 		for (int i = 0; i < numberOfTextAreas; i++) {
 			frame.add(textLabel[i]);
@@ -35,8 +35,8 @@ public class TextAreas extends Buttons {
 		textLabel[TextAreaNumber].setText(words);
 		textLabel[TextAreaNumber].setFont(new Font("Times New Roman", Font.PLAIN, fontSize));
 		textLabel[TextAreaNumber].setForeground(Color.LIGHT_GRAY);
-		textLabel[TextAreaNumber].setHorizontalAlignment(textLabel[TextAreaNumber].CENTER);
-		textLabel[TextAreaNumber].setVerticalAlignment(textLabel[TextAreaNumber].CENTER);
+		textLabel[TextAreaNumber].setHorizontalAlignment(JLabel.CENTER);
+		textLabel[TextAreaNumber].setVerticalAlignment(JLabel.CENTER);
 		
 		if (addBorder == true) {
 			textLabel[TextAreaNumber].setBorder(BorderFactory.createLineBorder(Color.GRAY));

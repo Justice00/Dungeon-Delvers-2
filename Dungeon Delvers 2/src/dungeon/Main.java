@@ -1,8 +1,8 @@
 package dungeon;
 
 public class Main {
-	public static CreateWindow createWindow = new CreateWindow();
-	//May need to gwt ride of all the commented one below as they cause wierd problems
+	public static Window createWindow = new Window();
+	//May need to gwt ride of all the commented one below as they cause weird problems
 	
 	//public static Buttons buttons = new Buttons();
 	//public static TextAreas textAreas = new TextAreas();

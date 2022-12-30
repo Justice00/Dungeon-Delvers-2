@@ -75,8 +75,8 @@ public class Buttons extends Items {
 		} else {
 			buttonLabel[buttonNumber].setText(buttonText);
 			buttonLabel[buttonNumber].setBackground(Color.GRAY);
-			buttonLabel[buttonNumber].setHorizontalAlignment(buttonLabel[buttonNumber].CENTER);
-			buttonLabel[buttonNumber].setVerticalAlignment(buttonLabel[buttonNumber].CENTER);
+			buttonLabel[buttonNumber].setHorizontalAlignment(JLabel.CENTER);
+			buttonLabel[buttonNumber].setVerticalAlignment(JLabel.CENTER);
 			buttonLabel[buttonNumber].setOpaque(true);
 		}
 		

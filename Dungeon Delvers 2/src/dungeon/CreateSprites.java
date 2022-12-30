@@ -3,7 +3,7 @@ package dungeon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class CreateSprites extends CreateWindow {
+public class CreateSprites extends Window {
 	public static int numberOfHeroSprites = 5;
 	public static JLabel[] heroSpriteLabel = new JLabel[numberOfHeroSprites];
 	public static ImageIcon[] heroSpriteImage = new ImageIcon[numberOfHeroSprites];

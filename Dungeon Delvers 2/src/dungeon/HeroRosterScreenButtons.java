@@ -1,6 +1,5 @@
 package dungeon;
 
-
 public class HeroRosterScreenButtons extends InfoScreenButtons {
 	public static int[] rosterCheck = new int[5];
 	
@@ -11,11 +10,9 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 			buttonLabel[i].setVisible(true);
 		}
 		
-		for (int i = 9; i < 20; i++) {
+		for (int i = 9; i < 28; i++) {
 			buttonLabel[i].setVisible(false);
 		}
-		
-		buttonLabel[27].setVisible(false);
 		
 		textLabel[0].setVisible(false);
 		textLabel[1].setVisible(false);
@@ -64,16 +61,14 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 	public static void nextToCombat() {
 		backgroundLabel.setIcon(backgroundImage[3]);
 		
-		buttonLabel[10].setVisible(false);
-		buttonLabel[11].setVisible(false);
-		buttonLabel[12].setVisible(false);
-		buttonLabel[13].setVisible(false);
-		buttonLabel[14].setVisible(false);
-		buttonLabel[15].setVisible(false);
-		buttonLabel[16].setVisible(true);
-		buttonLabel[17].setVisible(true);
-		buttonLabel[18].setVisible(true);
-		buttonLabel[19].setVisible(true);
+		for (int i = 10; i < 16; i++) {
+			buttonLabel[i].setVisible(false);
+		}
+		
+		
+		for (int i = 16; i < 20; i++) {
+			buttonLabel[i].setVisible(true);
+		}
 		
 		buttonLabel[2].setText("Back to Game");
 		
@@ -107,43 +102,16 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 			tempTwo = 2;
 		}
 		
-		if (currentHero.equals("Artorias")) {
-			updateInGameHeroStats(0);
+		for (int i = 0; i < 5; i++) {
+			if (currentHero.equals(hero[i].getName())) {
+				updateInGameHeroStats(i);
+			}
+		}
 			
-		} else if (currentHero.equals("Issac")) {
-			updateInGameHeroStats(1);
-			
-		} else if (currentHero.equals("Veth")) {
-			updateInGameHeroStats(2);
-			
-		} else if (currentHero.equals("Zim Zam")) {
-			updateInGameHeroStats(3);
-			
-		} else if (currentHero.equals("Ireena")) {
-			updateInGameHeroStats(4);
-			
-			
-		} else if (currentHero.equals(enemy[0].getName())) {
-			updateInGameEnemyStats(0);
-			
-		} else if (currentHero.equals(enemy[1].getName())) {
-			updateInGameEnemyStats(1);
-			
-		} else if (currentHero.equals(enemy[2].getName())) {
-			updateInGameEnemyStats(2);
-			
-		} else if (currentHero.equals(enemy[3].getName())) {
-			updateInGameEnemyStats(3);
-			
-		} else if (currentHero.equals(enemy[4].getName())) {
-			updateInGameEnemyStats(4);
-			
-		} else if (currentHero.equals(enemy[5].getName())) {
-			updateInGameEnemyStats(5);
-			
-		} else if (currentHero.equals(enemy[6].getName())) {
-			updateInGameEnemyStats(6);
-			
+		for (int i = 0; i < 7; i++) {
+			if (currentHero.equals(enemy[i].getName())) {
+				updateInGameEnemyStats(i);
+			}
 		}
 		
 		textLabel[1].setText(currentStats);
@@ -267,10 +235,10 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 			buttonLabel[19].setText("Mass Heal");
 			
 		} else {
-			buttonLabel[16].setVisible(false);
-			buttonLabel[17].setVisible(false);
-			buttonLabel[18].setVisible(false);
-			buttonLabel[19].setVisible(false);
+			for (int i = 16; i < 20; i++) {
+				buttonLabel[i].setVisible(false);
+			}
+			
 			buttonLabel[27].setVisible(true);
 		}
 	}

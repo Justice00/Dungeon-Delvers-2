@@ -13,16 +13,10 @@ public class KeyInputs extends Backgrounds implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		int i = -1;
 		
-		if (currentHero.equals("Artorias")) {
-			i = 0;
-		} else if (currentHero.equals("Issac")) {
-			i = 1;
-		} else if (currentHero.equals("Veth")) {
-			i = 2;
-		} else if (currentHero.equals("Zim Zam")) {
-			i = 3;
-		} else if (currentHero.equals("Ireena")) {
-			i = 4;
+		for (int x = 0; x < 5; x++) {
+			if (currentHero.equals(hero[x].getName())) {
+				i = x;
+			}
 		}
 		
 		if (i != -1) {

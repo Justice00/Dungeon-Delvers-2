@@ -52,10 +52,9 @@ public class InfoScreenButtons extends MainMenuScreenButtons {
 		buttonLabel[15].setVisible(false);
 
 		if (tempTwo == 0) {
-			buttonLabel[16].setVisible(true);
-			buttonLabel[17].setVisible(true);
-			buttonLabel[18].setVisible(true);
-			buttonLabel[19].setVisible(true);
+			for (int i = 16; i < 20; i++) {
+				buttonLabel[i].setVisible(true);
+			}
 		} else if (tempTwo == 1) {
 			showTargets();
 		} else if (tempTwo == 2) {
