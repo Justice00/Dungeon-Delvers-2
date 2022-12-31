@@ -258,8 +258,18 @@ public class InfoScreenButtons extends MainMenuScreenButtons {
 	
 	
 	public static void showTargets() {
-		for (int i = 20; i < 27; i++) {
-			buttonLabel[i].setVisible(true);
+		if (action.equals("Heal")) {
+			for (int i = 22; i < 25; i++) {
+				buttonLabel[i].setText(currentRoster[i - 22]);
+				buttonLabel[i].setVisible(true);
+			}
+			
+		} else {
+			for (int i = 20; i < 27; i++) {
+				buttonLabel[i].setText(enemy[i - 20].getName());
+				buttonLabel[i].setVisible(true);
+			}
+			
 		}
 	}
 

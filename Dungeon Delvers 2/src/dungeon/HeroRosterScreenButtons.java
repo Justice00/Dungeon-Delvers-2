@@ -95,6 +95,8 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 			}
 		}
 		
+		System.out.println("");
+		
 		textLabel[2].setText("<html><center> <b>Current Turn | <u>" + currentHero + "</u> |</b></center><br/>" + currentOrder + "</html>");
 		changeButtonNames();
 		
@@ -175,30 +177,7 @@ public class HeroRosterScreenButtons extends InfoScreenButtons {
 	
 	
 	
-	public static void updateInGameHeroStats(int i) {
-		currentStats = hero[i].getName()
-				+ " | Health " + hero[i].getCurrentHealth() + "/" + hero[i].getMaxHealth()
-				+ " | Armor " + hero[i].getArmor()
-				+ " | Damage " + hero[i].getDamage()
-				+ " | Speed " + hero[i].getCurrentSpeed() + "/" + hero[i].getMaxSpeed()
-				+ " |";
-		if (hero[i].getMaxMana() != 0) {
-			currentStats = currentStats + " Mana " + hero[i].getCurrentMana() + "/" + hero[i].getMaxMana();
-		}
-	}
 	
-	
-	public static void updateInGameEnemyStats(int i) {
-		currentStats = enemy[i].getName()
-				+ " | Health " + enemy[i].getCurrentHealth() + "/" + enemy[i].getMaxHealth()
-				+ " | Armor " + enemy[i].getArmor()
-				+ " | Damage " + enemy[i].getDamage()
-				+ " | Speed " + enemy[i].getCurrentSpeed() + "/" + enemy[i].getMaxSpeed()
-				+ " |";
-		if (enemy[i].getMaxMana() != 0) {
-			currentStats = currentStats + " Mana " + enemy[i].getCurrentMana() + "/" + enemy[i].getMaxMana();
-		}
-	}
 	
 	
 	

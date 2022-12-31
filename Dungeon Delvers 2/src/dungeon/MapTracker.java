@@ -6,7 +6,7 @@ public class MapTracker extends CreateSprites {
 	int mapY;
 	
 	public MapTracker() {
-		
+		map[0][0] = enemy[0].getName();
 	}
 	
 	public void printConsoleMap() {

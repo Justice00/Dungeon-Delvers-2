@@ -5,16 +5,14 @@ import java.util.Random;
 public class CreateCombat extends MapTracker {
 	public static Random random = new Random();
 	
-	public static String[] order = new String[3 + 7];
+	public static boolean[] alive = new boolean[10];
+	
+	public static String[] order = new String[10];
 	public static String currentOrder;
 	
 	public static String[] currentRoster = {null, null, null};
 	public static String currentHero = null;
 	public static int currentHeroNumber = 0;
-	
-	public CreateCombat() {
-		
-	}
 	
 	//Need to make it so enemies show up on console map
 	public static void combatInfo() {
@@ -74,6 +72,7 @@ public class CreateCombat extends MapTracker {
 	public static void resetCombat() {
 		for (int i = 0; i < order.length; i++) {
 			order[i] = null;
+			alive[i] = true;
 		}
 	}
 }

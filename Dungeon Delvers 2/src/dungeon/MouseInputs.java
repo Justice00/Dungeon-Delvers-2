@@ -72,7 +72,7 @@ public class MouseInputs extends CombatScreenButtons implements MouseListener {
 		
 		for(int i = 20; i < 27; i++) {
 			if (event.getSource() == buttonLabel[i]) {
-				target(i - 19);
+				target(i - 20);
 			}
 		}
 		
@@ -124,10 +124,6 @@ public class MouseInputs extends CombatScreenButtons implements MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent event) {
-		// i have know idea what this is!
-		// Justice's Teacher save me justice is forcing me to fix is horrific code
-		// please save me
-		
 		for(int i = 0; i < 30; i++){
 			if (event.getSource() == buttonLabel[i] && (i < 9 || i > 14)) {
 				buttonAreaEnter(i);
@@ -146,7 +142,6 @@ public class MouseInputs extends CombatScreenButtons implements MouseListener {
 	
 	@Override
 	public void mouseExited(MouseEvent event) {
-		// Fortnite Battle Pass
 		for(int i = 0; i < 30; i++){
 			if (event.getSource() == buttonLabel[i] && (i < 9 || i > 14)) {
 				buttonAreaExit(i);

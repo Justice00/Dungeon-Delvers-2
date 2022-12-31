@@ -1,29 +1,39 @@
 package dungeon;
 
 public class CombatScreenButtons extends HeroRosterScreenButtons {
-	public static String target;
-	
 	public static void action(int i) {
+		
+		switch(i) {
+		
+		case 1:
+			action = buttonLabel[16].getText();
+			break;
+		
+		case 2:
+			action = buttonLabel[17].getText();
+			break;
+		
+		case 3:
+			action = buttonLabel[18].getText();
+			break;
+			
+		case 4:
+			action = buttonLabel[19].getText();
+			break;
+		}
 		
 		tempTwo = 1;
 		speedToZero();
 		hideButtons();
-		showTargets();
 		
-		// put action dependent instruction here justman
-		switch(i) {
-		
-		case 1:
+		if (action.equals("Crushing Blow") || action.equals("Protection") || action.equals("Dash") || action.equals("Volley")  || action.equals("Recover") || action.equals("Dodge") || action.equals("Shockwave") || action.equals("Magic Barrier") || action.equals("Mass Heal")){
+			heroActions(0);
+			buttonLabel[27].setVisible(true);
 			
-			break;
-		
-		case 2:
 			
-			break;
-		
-		case 3:
+		} else {
+			showTargets();
 			
-			break;
 		}
 	}
 	
@@ -31,14 +41,23 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 	public static void target(int i) {
 		tempTwo = 2;
 		
-		
 		target = enemy[i].getName();
-		
+		System.out.println(target);
 		for (int x = 20; x < 27; x++) {
 			buttonLabel[x].setVisible(false);
 		}
 		
 		buttonLabel[27].setVisible(true);
+		//////
+		if (action.equals("Heal")) {
+			for (int x = 0; x < 5; x++) {
+				if (target.equals(hero[i].getName())) {
+					i = x;
+				}
+			}
+		}
+		/////
+		heroActions(i);
 	}
 	
 	
@@ -110,8 +129,6 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 			
 		}
 		
-		textLabel[1].setText(currentStats);
-		
 		currentOrder = "Turn Order | ";
 		for (int i = 0; i < order.length; i++) {
 			if (currentHero == order[i]) {
@@ -125,6 +142,10 @@ public class CombatScreenButtons extends HeroRosterScreenButtons {
 			}
 		}
 		
+		System.out.println("");
+		
+		textLabel[0].setText("");
+		textLabel[1].setText(currentStats);
 		textLabel[2].setText("<html><center> <b>Current Turn | <u>" + currentHero + "</u> |</b></center><br/>" + currentOrder + "</html>");
 		
 		changeButtonNames();

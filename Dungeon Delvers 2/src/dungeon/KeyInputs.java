@@ -51,7 +51,16 @@ public class KeyInputs extends Backgrounds implements KeyListener {
 	}
 	
 	
-	
+			//TODO
+			//
+			//TODO
+			//For Artorias's Passive ability make it so that it's checked in the key input class each time the player moves and once at the start of the game.
+			//TODO
+			//
+			//TODO
+			//
+			//
+			//
 	
 	public void moveOnMap(int i, int x, int y) {
 		hero[i].setXLocation(hero[i].getXLocation() + x);

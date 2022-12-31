@@ -2,7 +2,7 @@ package dungeon;
 
 import java.awt.Color;
 
-public class MainMenuScreenButtons extends KeyInputs {
+public class MainMenuScreenButtons extends Actions {
 	
 	public static void startToHeroInfo() {
 		backgroundLabel.setIcon(backgroundImage[1]);
